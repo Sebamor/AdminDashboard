@@ -1,0 +1,355 @@
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  vertical-align: baseline;
+}
+
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+  display: block;
+}
+
+body {
+  line-height: 1;
+}
+
+ol, ul {
+  list-style: none;
+}
+
+blockquote, q {
+  quotes: none;
+}
+
+blockquote:before, blockquote:after,
+q:before, q:after {
+  content: "";
+  content: none;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box !important;
+  list-style: none;
+  font-family: Roboto, "Courier New", Courier, monospace;
+}
+
+html {
+  height: 100%;
+}
+
+html, body {
+  margin: 0;
+  box-sizing: border-box;
+  min-height: 100%;
+  min-width: 100%;
+}
+
+body {
+  display: grid;
+  grid-template: "n h" "n m" "n m";
+  grid-template-columns: 1fr 4fr;
+  grid-template-rows: 1fr 4fr;
+}
+
+nav {
+  background: #166534;
+  grid-area: n;
+  display: grid;
+  grid-template-rows: minmax(50px, 100px) 1fr 1fr;
+  padding-left: 25px;
+  gap: 40px;
+  height: 100% !important;
+}
+nav .title {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 15px;
+  font-weight: 600;
+  font-size: 28px;
+  color: white;
+}
+nav .title svg {
+  height: 70px;
+  width: 70px;
+  color: white;
+}
+nav .nav-list-container ul {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+nav .nav-list-container ul li {
+  display: flex;
+  flex-direction: row;
+  align-items: flex-end;
+  font-size: 20px;
+  font-weight: 600;
+  color: white;
+  gap: 20px;
+}
+nav .nav-list-container ul li svg {
+  height: 30px;
+  width: 30px;
+}
+nav .nav-list-extra-container ul {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+nav .nav-list-extra-container ul li {
+  display: flex;
+  flex-direction: row;
+  align-items: flex-end;
+  font-size: 20px;
+  font-weight: 600;
+  color: white;
+  gap: 20px;
+}
+nav .nav-list-extra-container ul li svg {
+  height: 30px;
+  width: 30px;
+}
+
+header {
+  grid-area: h;
+  display: grid;
+  grid-template-rows: 1fr 1fr;
+}
+header .header-top {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  background: #fff;
+  padding-left: 10px;
+}
+header .header-top .search-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 10px;
+  width: 70%;
+  height: 50%;
+  padding-left: 40px;
+}
+header .header-top .search-container label {
+  height: 30px;
+  width: 30px;
+}
+header .header-top .search-container input {
+  height: 30px;
+  width: 800px;
+  border-radius: 15px;
+  border: none;
+  text-align: center;
+  background: rgb(190, 218, 194);
+}
+header .header-top .notification-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  gap: 20px;
+  align-items: center;
+  width: 30%;
+  height: 50%;
+}
+header .header-top .notification-container .notifications {
+  height: 30px;
+  width: 30px;
+}
+header .header-top .notification-container .profile img {
+  height: 50px;
+  width: 50px;
+  border-radius: 50px;
+}
+header .header-top .notification-container .username {
+  width: 80px;
+  height: 50px;
+  display: flex;
+  flex-direction: column;
+  font-weight: 600;
+  justify-content: center;
+  text-wrap: nowrap;
+}
+header .header-bottom {
+  background: #fff;
+  box-shadow: 0 50px 10px -15px #111;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  padding-left: 60px;
+}
+header .header-bottom .hb-left-container {
+  display: flex;
+  flex-direction: row;
+  gap: 20px;
+}
+header .header-bottom .hb-left-container img {
+  width: 80px;
+  height: 80px;
+  border-radius: 50px;
+}
+header .header-bottom .hb-left-container .hb-left-welcome {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 10px;
+}
+header .header-bottom .hb-left-container .hb-left-welcome-intro {
+  font-weight: 700;
+  font-size: 16px;
+}
+header .header-bottom .hb-left-container .hb-left-welcome-user {
+  font-weight: 700;
+  font-size: 26px;
+}
+header .header-bottom .hb-right-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  gap: 30px;
+}
+header .header-bottom .hb-right-container button {
+  background: #166534;
+  border: none;
+  width: 120px;
+  height: 40px;
+  border-radius: 25px;
+  color: white;
+  font-weight: 700;
+  font-size: 16px;
+}
+
+main {
+  background: rgb(217, 231, 216);
+  padding: 20px;
+  grid-area: m;
+  display: grid;
+  grid-template-columns: 4fr 1fr;
+  gap: 20px;
+}
+main .main-projects h2 {
+  padding-bottom: 20px;
+}
+main .main-projects .main-projects-grid-container {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 1fr 1fr 1fr;
+  gap: 40px;
+}
+main .main-projects .main-projects-grid-container .projects-container {
+  height: 200px;
+  background: #fff;
+  padding: 20px 100px 40px 40px;
+  border-radius: 15px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+main .main-projects .main-projects-grid-container .projects-container .pc-svg-track {
+  align-self: flex-end;
+  padding-top: 20px;
+}
+main .main-projects .main-projects-grid-container .projects-container .pc-svg-track svg {
+  width: 30px;
+  height: 30px;
+}
+main .main-projects .main-projects-grid-container .projects-container::before {
+  content: "";
+  background: red;
+  left: 10px;
+}
+main .main-extras h2 {
+  padding-bottom: 15px;
+  padding-top: 8px;
+}
+main .main-extras .main-extra-grid-container {
+  display: grid;
+  gap: 10px;
+}
+main .main-extras .main-extra-grid-container .main-announcement-container {
+  height: 300px;
+  background: #fff;
+  border-radius: 15px;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+main .main-extras .main-extra-grid-container .main-announcement-container p {
+  color: rgb(87, 87, 87);
+  padding-top: 5px;
+}
+main .main-extras .main-extra-grid-container .main-announcement-container .announcement {
+  font-size: 12px;
+  padding: 10px;
+}
+main .main-extras .main-extra-grid-container .main-announcement-container .ac1 {
+  color: black;
+  border-bottom: 1px solid black;
+}
+main .main-extras .main-extra-grid-container .main-announcement-container .ac2 {
+  color: black;
+  border-bottom: 1px solid black;
+}
+main .main-extras .main-extra-grid-container .main-announcement-container .ac3 {
+  color: black;
+}
+main .main-extras .main-extra-grid-container .main-trending-container {
+  height: 300px;
+  background: #fff;
+  border-radius: 15px;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+main .main-extras .main-extra-grid-container .main-trending-container .trending-user-container {
+  display: flex;
+  flex-direction: row;
+  gap: 10px;
+}
+main .main-extras .main-extra-grid-container .main-trending-container .trending-user-container img {
+  width: 50px;
+  height: 50px;
+  border-radius: 50px;
+}
+main .main-extras .main-extra-grid-container .main-trending-container .trending-user-container .trending-username-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+main .main-extras .main-extra-grid-container .main-trending-container .trending-user-container .trending-username-container .tuc-userhandle {
+  font-weight: 400;
+}
+main .main-extras .main-extra-grid-container .main-trending-container .trending-user-container .trending-username-container .tuc-project {
+  color: rgb(87, 87, 87);
+}
+
+/*# sourceMappingURL=main.css.map */
