@@ -259,6 +259,7 @@ main {
                 display: flex;
                 flex-direction: column;
                 gap: 10px;
+                position: absolute;
 
                 .pc-svg-track {
                     align-self: flex-end;
@@ -269,12 +270,6 @@ main {
                         height: 30px;
                     }
                 }
-            }
-
-            .projects-container::before {
-                content: '';
-                background: red;
-                left: 10px;
             }
         }
     }
